@@ -54,6 +54,27 @@ export default function Hero() {
             </div>
           ))}
         </div>
+
+        {/* Photo strip — shows pack photos when present in /public/images/ */}
+        <div className="mt-10 grid grid-cols-4 gap-2 max-w-2xl mx-auto pb-4">
+          {[
+            { path: "/images/hero-1.jpg", label: "Camping" },
+            { path: "/images/hero-2.jpg", label: "Hiking" },
+            { path: "/images/hero-3.jpg", label: "Derby" },
+            { path: "/images/hero-4.jpg", label: "Service" },
+          ].map((photo) => (
+            <div
+              key={photo.path}
+              className="aspect-square rounded-xl overflow-hidden bg-blue-800/60 ring-1 ring-white/10"
+              style={{
+                backgroundImage: `url(${photo.path})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              aria-label={photo.label}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Wave divider */}
