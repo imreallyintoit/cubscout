@@ -55,23 +55,22 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Photo strip — shows pack photos when present in /public/images/ */}
+        {/* Photo strip */}
         <div className="mt-10 grid grid-cols-4 gap-2 max-w-2xl mx-auto pb-4">
           {[
-            { path: "/images/hero-1.jpg", label: "Camping" },
-            { path: "/images/hero-2.jpg", label: "Hiking" },
-            { path: "/images/hero-3.jpg", label: "Derby" },
-            { path: "/images/hero-4.jpg", label: "Service" },
-          ].map((photo) => (
+            "https://i.imgur.com/HRf6x1y.jpeg",
+            "https://i.imgur.com/P0Tym2B.jpeg",
+            "https://i.imgur.com/1tZCeOk.jpeg",
+            "https://i.imgur.com/37WRqv5.jpeg",
+          ].map((url) => (
             <div
-              key={photo.path}
+              key={url}
               className="aspect-square rounded-xl overflow-hidden bg-blue-800/60 ring-1 ring-white/10"
               style={{
-                backgroundImage: `url(${photo.path})`,
+                backgroundImage: `url(${url})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              aria-label={photo.label}
             />
           ))}
         </div>
