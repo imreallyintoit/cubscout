@@ -1,37 +1,52 @@
 const firstYearCosts = [
   {
-    category: "BSA National Registration",
+    category: "Scouting America Registration",
     amount: 85,
     frequency: "annual",
-    notes: "Includes accident insurance. Due at registration.",
+    notes: "National Scouting America fee. Includes accident insurance.",
     icon: "🏛️",
   },
   {
-    category: "Pack 5 Dues",
-    amount: 75,
+    category: "Northeast Illinois Council Fee",
+    amount: 85,
     frequency: "annual",
-    notes: "Covers den supplies, Pinewood Derby, awards, and pack activities.",
+    notes: "Separate local council (NEIC) registration fee, in addition to the national fee.",
+    icon: "🗺️",
+  },
+  {
+    category: "Pack 5 Dues",
+    amount: 0,
+    tbd: true,
+    frequency: "annual",
+    notes: "Amount TBD — under review by Pack leadership. Covers den supplies, awards, and pack activities.",
     icon: "🎒",
   },
   {
     category: "Uniform Shirt",
     amount: 45,
     frequency: "one-time",
-    notes: "Official Cub Scout uniform shirt. Kids often wear for multiple years.",
+    notes: "Official Cub Scout uniform shirt. Lions (K) and Tigers (1st) wear a rank t-shirt instead.",
     icon: "👕",
+  },
+  {
+    category: "Uniform Pants",
+    amount: 30,
+    frequency: "one-time",
+    notes: "Official uniform pants (optional but recommended).",
+    icon: "👖",
   },
   {
     category: "Neckerchief & Slide",
     amount: 20,
-    frequency: "one-time",
-    notes: "Pack-specific neckerchief included in Pack dues for new members.",
+    frequency: "annual",
+    notes: "Rank-specific color changes each year as your Scout advances.",
     icon: "🪢",
   },
   {
     category: "Hat / Cap",
     amount: 20,
     frequency: "one-time",
-    notes: "Rank-specific cap (e.g., Tiger orange, Wolf tan).",
+    notes: "Rank-specific cap. Optional — many families skip the hat.",
     icon: "🧢",
   },
   {
@@ -52,14 +67,16 @@ const firstYearCosts = [
     category: "Pinewood Derby Car Kit",
     amount: 5,
     frequency: "annual",
-    notes: "Official BSA kit required. Sold at Pack meetings.",
+    notes: "Official kit required. Sold at Pack meetings.",
     icon: "🏎️",
   },
 ];
 
 const renewalCosts = [
-  { category: "BSA National Registration", amount: 85 },
-  { category: "Pack 5 Dues", amount: 75 },
+  { category: "Scouting America Registration", amount: 85 },
+  { category: "Northeast Illinois Council Fee", amount: 85 },
+  { category: "Pack 5 Dues", amount: 0, tbd: true },
+  { category: "Neckerchief (annual, rank-specific)", amount: 20 },
   { category: "Rank Handbook", amount: 15 },
   { category: "Camp / Activities (estimate)", amount: 150 },
   { category: "Pinewood Derby Car Kit", amount: 5 },
@@ -75,8 +92,8 @@ const budgetItems = [
 ];
 
 export default function Costs() {
-  const firstYearTotal = firstYearCosts.reduce((s, c) => s + c.amount, 0);
-  const renewalTotal = renewalCosts.reduce((s, c) => s + c.amount, 0);
+  const firstYearTotal = firstYearCosts.filter((c) => !c.tbd).reduce((s, c) => s + c.amount, 0);
+  const renewalTotal = renewalCosts.filter((c) => !c.tbd).reduce((s, c) => s + c.amount, 0);
 
   return (
     <section id="costs" className="py-20 bg-white">
@@ -120,7 +137,7 @@ export default function Costs() {
                         </div>
                       </td>
                       <td className="px-4 py-3 text-right font-bold text-gray-700">
-                        ${item.amount}
+                        {item.tbd ? <span className="text-amber-600 text-xs font-semibold">TBD</span> : `$${item.amount}`}
                       </td>
                       <td className="px-4 py-3 text-right hidden md:table-cell">
                         <span
@@ -171,7 +188,7 @@ export default function Costs() {
                       >
                         <td className="px-4 py-2 text-gray-700">{item.category}</td>
                         <td className="px-4 py-2 text-right font-bold text-gray-700">
-                          ${item.amount}
+                          {item.tbd ? <span className="text-amber-600 text-xs font-semibold">TBD</span> : `$${item.amount}`}
                         </td>
                       </tr>
                     ))}
@@ -218,10 +235,12 @@ export default function Costs() {
           <div>
             <h4 className="font-bold text-amber-900 text-lg mb-1">Financial Assistance Available</h4>
             <p className="text-amber-800 text-sm leading-relaxed">
-              No Scout should miss out on Scouting due to financial constraints. BSA offers
-              the&nbsp;
-              <strong>Scoutreach</strong> program, and Pack 5 has limited scholarship funds
-              available for families in need. Please contact our Cubmaster confidentially at{" "}
+              No Scout should miss out on Scouting due to financial constraints. The Northeast
+              Illinois Council offers&nbsp;
+              <strong>scholarships</strong> (registration fee assistance) and&nbsp;
+              <strong>camperships</strong> (summer camp and day camp assistance) for families in
+              need. Pack 5 may also have limited scholarship funds available — please contact our
+              Cubmaster confidentially at{" "}
               <a
                 href="mailto:pack5wilmette@gmail.com"
                 className="font-semibold underline hover:text-amber-900"

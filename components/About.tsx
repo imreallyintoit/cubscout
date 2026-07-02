@@ -41,14 +41,14 @@ export default function About() {
           <div>
             <h3 className="text-2xl font-bold text-scout-blue-900 mb-4">Our Story</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Cub Scout Pack 5 meets in Wilmette, Illinois and is proud to be part of the Boy Scouts
-              of America&apos;s Chicago Area Council. We welcome all youth in grades K–5 (ages 5–10)
-              regardless of experience level.
+              Cub Scout Pack 5 meets in Wilmette, Illinois and is proud to be part of
+              Scouting America&apos;s Northeast Illinois Council (NEIC). We welcome all youth in
+              grades K–5 (ages 5–10) regardless of experience level.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Our dens are organized by grade level: Lions (K), Tigers (1st), Wolves (2nd), Bears
-              (3rd), and Webelos/Arrow of Light (4th–5th). Each den meets regularly, working toward
-              rank advancements, badges, and amazing shared experiences.
+              (3rd), Webelos (4th), and Arrow of Light (5th). Each den meets regularly, working
+              toward rank advancements, badges, and amazing shared experiences.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Throughout the year we camp, hike, build, create, compete in the Pinewood Derby, and

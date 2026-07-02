@@ -4,7 +4,7 @@ const steps = [
     icon: "📅",
     title: "Visit a Pack Meeting",
     description:
-      "Come to one of our free open Pack meetings (held monthly at a local school). Meet the Cubmaster, den leaders, and current Scouts. No commitment required — just show up!",
+      "Come to one of our free open Pack meetings (held monthly at First Presbyterian Church of Wilmette). Meet the Cubmaster, den leaders, and current Scouts. No commitment required — just show up!",
     action: "See our calendar →",
     actionHref: "#calendar",
   },
@@ -13,7 +13,7 @@ const steps = [
     icon: "🌐",
     title: "Register Online",
     description:
-      "Create an account at my.Scouting.org and register your Scout with Pack 5 (Chicago Area Council). The BSA national registration fee is approximately $85/year.",
+      "Create an account at my.Scouting.org and register your Scout with Pack 5 (Northeast Illinois Council). There are two registration fees: a Scouting America fee and a separate Northeast Illinois Council (NEIC) fee. See the Costs page for a full breakdown.",
     action: "my.Scouting.org →",
     actionHref: "https://my.scouting.org",
   },

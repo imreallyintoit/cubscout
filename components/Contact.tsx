@@ -37,10 +37,10 @@ export default function Contact() {
               },
               {
                 icon: "🏛️",
-                title: "Chicago Area Council",
-                detail: "chicagobsa.org",
-                href: "https://www.chicagobsa.org",
-                sub: "Our regional BSA council for events, camp registration, and resources",
+                title: "Northeast Illinois Council",
+                detail: "nepathways.org",
+                href: "https://www.nepathways.org",
+                sub: "Our local NEIC council for events, camp registration, and scholarship resources",
               },
             ].map((item) => (
               <div key={item.title} className="card flex gap-4 hover:shadow-lg transition-shadow">
