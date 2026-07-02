@@ -12,8 +12,9 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-blue-300">
-              Cub Scout Pack 5 serves youth in grades K–5 in Wilmette, Illinois. We are
-              chartered through the Boy Scouts of America (BSA).
+              Cub Scout Pack 5 serves youth in grades K–5 in Wilmette, Illinois. Chartered by
+              First Presbyterian Church of Wilmette through Scouting America and the Northeast
+              Illinois Council (NEIC).
             </p>
           </div>
           <div>
@@ -59,19 +60,19 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.chicagobsa.org"
+                  href="https://www.nepathways.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-scout-gold transition-colors"
                 >
-                  Chicago Area Council
+                  Northeast Illinois Council (NEIC)
                 </a>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-blue-800 mt-8 pt-6 text-sm text-blue-400 text-center">
-          © {year} Cub Scout Pack 5, Wilmette, IL. All rights reserved. &nbsp;|&nbsp; BSA Chicago Area Council
+          © {year} Cub Scout Pack 5, Wilmette, IL. All rights reserved. &nbsp;|&nbsp; Northeast Illinois Council, Scouting America
         </div>
       </div>
     </footer>
