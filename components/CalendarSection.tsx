@@ -70,6 +70,17 @@ function EventCard({ event }: { event: SheetEvent }) {
             {event.description}
           </p>
         )}
+
+        {event.signUpUrl && (
+          <a
+            href={event.signUpUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 mt-2 text-xs font-semibold text-scout-blue-900 bg-scout-gold/20 hover:bg-scout-gold/40 px-2.5 py-1 rounded-full transition-colors"
+          >
+            📋 Sign Up
+          </a>
+        )}
       </div>
     </div>
   );
