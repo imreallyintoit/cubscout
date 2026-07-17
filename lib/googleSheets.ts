@@ -6,6 +6,7 @@ export interface SheetEvent {
   location: string;
   description: string;
   category: "Meeting" | "Camp" | "Activity" | "Service" | "Other";
+  signUpUrl: string;  // optional sign-up or info link (column H)
 }
 
 /**
@@ -27,7 +28,7 @@ export async function fetchSheetEvents(
   apiKey: string,
   tab = "Events"
 ): Promise<SheetEvent[]> {
-  const range = encodeURIComponent(`${tab}!A2:G200`);
+  const range = encodeURIComponent(`${tab}!A2:H200`);
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
 
   const res = await fetch(url, { next: { revalidate: 3600 } }); // cache 1 hour
@@ -48,6 +49,7 @@ export async function fetchSheetEvents(
       location: row[4]?.trim() ?? "",
       description: row[5]?.trim() ?? "",
       category: (row[6]?.trim() as SheetEvent["category"]) ?? "Other",
+      signUpUrl: row[7]?.trim() ?? "",
     }))
     .sort((a, b) => a.date.localeCompare(b.date));
 }
@@ -62,6 +64,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Central Elementary, Wilmette",
     description: "Kick off the new Scout year! Meet your den leaders and learn about upcoming adventures.",
     category: "Meeting",
+    signUpUrl: "",
   },
   {
     date: "2026-09-20",
@@ -71,6 +74,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Various Locations",
     description: "All dens start their regular bi-weekly meeting schedule. Check with your den leader for specific times.",
     category: "Meeting",
+    signUpUrl: "",
   },
   {
     date: "2026-10-05",
@@ -80,6 +84,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Illinois Beach State Park, Zion, IL",
     description: "A family-friendly hike along the Lake Michigan shoreline. Bring a sack lunch and water.",
     category: "Activity",
+    signUpUrl: "",
   },
   {
     date: "2026-10-13",
@@ -89,6 +94,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Central Elementary, Wilmette",
     description: "Monthly pack meeting. Rank advancements and badge ceremonies.",
     category: "Meeting",
+    signUpUrl: "",
   },
   {
     date: "2026-11-01",
@@ -98,6 +104,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Wilmette Community Center",
     description: "Scouts help sort and pack donations at the local food pantry. A great service project for the whole family.",
     category: "Service",
+    signUpUrl: "",
   },
   {
     date: "2026-11-10",
@@ -107,6 +114,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Central Elementary, Wilmette",
     description: "We honor local veterans and Scouts share what service means to them.",
     category: "Meeting",
+    signUpUrl: "",
   },
   {
     date: "2026-12-08",
@@ -116,6 +124,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "TBD",
     description: "Annual holiday gathering with Scout recognition, games, and refreshments.",
     category: "Activity",
+    signUpUrl: "",
   },
   {
     date: "2027-01-24",
@@ -125,6 +134,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Pack 5 Garage Workshop",
     description: "Car-building workshop. Bring your kit and tools! Adult supervision provided.",
     category: "Activity",
+    signUpUrl: "",
   },
   {
     date: "2027-02-07",
@@ -134,6 +144,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Wilmette Park District Community House",
     description: "The big race! All families welcome. Fastest 3 cars advance to district.",
     category: "Activity",
+    signUpUrl: "",
   },
   {
     date: "2027-03-14",
@@ -143,6 +154,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Camp Owasippe, Twin Lake, MI",
     description: "Spring overnight camping trip. Scouts learn fire safety, archery, and Leave No Trace principles.",
     category: "Camp",
+    signUpUrl: "",
   },
   {
     date: "2027-04-12",
@@ -152,6 +164,7 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Reneker Park, Wilmette",
     description: "District-wide Camporee with activities, competition, and fun in the sun.",
     category: "Camp",
+    signUpUrl: "",
   },
   {
     date: "2027-05-18",
@@ -161,5 +174,6 @@ export const DEMO_EVENTS: SheetEvent[] = [
     location: "Wilmette Park District Community House",
     description: "Annual Blue & Gold Banquet celebrating the year's achievements. Arrow of Light Scouts cross over to Scouts BSA.",
     category: "Activity",
+    signUpUrl: "",
   },
 ];
