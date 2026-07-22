@@ -38,8 +38,8 @@ export default function Contact() {
               {
                 icon: "🏛️",
                 title: "Northeast Illinois Council",
-                detail: "nepathways.org",
-                href: "https://www.nepathways.org",
+                detail: "neic.org",
+                href: "https://www.neic.org",
                 sub: "Our local NEIC council for events, camp registration, and scholarship resources",
               },
             ].map((item) => (
