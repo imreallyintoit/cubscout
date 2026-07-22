@@ -200,37 +200,6 @@ export default function CalendarSection() {
           </div>
         )}
 
-        {/* Google Sheets setup callout */}
-        <div className="mt-14 bg-scout-blue-900 rounded-2xl p-8 text-white">
-          <h3 className="text-lg font-bold text-scout-gold mb-2">
-            📊 Connecting Your Google Sheet
-          </h3>
-          <p className="text-blue-200 text-sm leading-relaxed mb-4">
-            Pack leaders can update the calendar by editing the shared Google Sheet. No coding
-            required. Once connected, the website automatically refreshes every hour.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-            {[
-              {
-                step: "1",
-                text: "Create a Google Sheet with columns: Date, Title, Start Time, End Time, Location, Description, Category",
-              },
-              {
-                step: "2",
-                text: 'Set GOOGLE_SHEETS_API_KEY and NEXT_PUBLIC_GOOGLE_SHEETS_ID in your .env.local file (see .env.example)',
-              },
-              {
-                step: "3",
-                text: "Publish the sheet (File → Share → Publish to web) and add events. The site auto-updates every hour.",
-              },
-            ].map((s) => (
-              <div key={s.step} className="bg-white/10 rounded-xl p-4">
-                <span className="text-scout-gold font-black text-lg">Step {s.step}</span>
-                <p className="text-blue-200 text-xs mt-1 leading-relaxed">{s.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
