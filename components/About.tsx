@@ -15,7 +15,7 @@ const pillars = [
     icon: "🏃",
     title: "Fitness",
     description:
-      "From hikes at Illinois Beach State Park to Pinewood Derby, Scouts stay active and healthy.",
+      "From a summer bike outing to Capture the Flag on campouts to the Fitness Adventure that is part of every rank, Scouts stay active and healthy.",
   },
   {
     icon: "👫",

@@ -5,18 +5,18 @@ import { useState } from "react";
 
 // 12 square grid photos
 const GRID_PHOTOS = [
-  { src: "https://i.imgur.com/HRf6x1y.jpeg", alt: "Pack 5 scouts", label: "Pack Meeting", category: "Meetings" },
-  { src: "https://i.imgur.com/tILWmIs.jpeg", alt: "Pack 5 scouts", label: "Camping", category: "Outdoors" },
-  { src: "https://i.imgur.com/3EPTclM.jpeg", alt: "Pack 5 scouts", label: "Community Service", category: "Service" },
-  { src: "https://i.imgur.com/P0Tym2B.jpeg", alt: "Pack 5 scouts", label: "Pinewood Derby", category: "Activities" },
-  { src: "https://i.imgur.com/1tZCeOk.jpeg", alt: "Pack 5 scouts", label: "Hiking", category: "Outdoors" },
-  { src: "https://i.imgur.com/xGQHQoT.jpeg", alt: "Pack 5 scouts", label: "Blue & Gold", category: "Celebrations" },
-  { src: "https://i.imgur.com/2BXgTRW.jpeg", alt: "Pack 5 scouts", label: "Den Activities", category: "Activities" },
-  { src: "https://i.imgur.com/IebfLaC.jpeg", alt: "Pack 5 scouts", label: "Pack Events", category: "Activities" },
-  { src: "https://i.imgur.com/Mm4c4j2.jpeg", alt: "Pack 5 scouts", label: "Outdoor Adventure", category: "Outdoors" },
-  { src: "https://i.imgur.com/37WRqv5.jpeg", alt: "Pack 5 scouts", label: "Rank Advancement", category: "Achievements" },
-  { src: "https://i.imgur.com/TQIHjH5.jpeg", alt: "Pack 5 scouts", label: "Scout Activities", category: "Activities" },
-  { src: "https://i.imgur.com/VizPCqd.jpeg", alt: "Pack 5 scouts", label: "Family Fun", category: "Activities" },
+  { src: "https://i.imgur.com/HRf6x1y.jpeg", alt: "Pack 5 scouts at a pack meeting", label: "Pack Meeting", category: "Meetings" },
+  { src: "https://i.imgur.com/tILWmIs.jpeg", alt: "Pack 5 scouts camping", label: "Camping Trip", category: "Outdoors" },
+  { src: "https://i.imgur.com/3EPTclM.jpeg", alt: "Pack 5 scouts doing community service", label: "Community Service", category: "Service" },
+  { src: "https://i.imgur.com/P0Tym2B.jpeg", alt: "Pack 5 scouts on an outdoor adventure", label: "Outdoor Adventure", category: "Outdoors" },
+  { src: "https://i.imgur.com/1tZCeOk.jpeg", alt: "Pack 5 scouts hiking", label: "Hiking", category: "Outdoors" },
+  { src: "https://i.imgur.com/xGQHQoT.jpeg", alt: "Pack 5 Blue & Gold banquet", label: "Blue & Gold Banquet", category: "Celebrations" },
+  { src: "https://i.imgur.com/2BXgTRW.jpeg", alt: "Pack 5 scouts in den activities", label: "Den Activities", category: "Activities" },
+  { src: "https://i.imgur.com/IebfLaC.jpeg", alt: "Pack 5 scouts at a pack event", label: "Pack Events", category: "Activities" },
+  { src: "https://i.imgur.com/Mm4c4j2.jpeg", alt: "Pack 5 scouts on an outdoor adventure", label: "Scouts in Nature", category: "Outdoors" },
+  { src: "https://i.imgur.com/37WRqv5.jpeg", alt: "Pack 5 scouts at rank advancement ceremony", label: "Rank Advancement", category: "Achievements" },
+  { src: "https://i.imgur.com/TQIHjH5.jpeg", alt: "Pack 5 scouts at the Pinewood Derby", label: "Pinewood Derby", category: "Activities" },
+  { src: "https://i.imgur.com/VizPCqd.jpeg", alt: "Pack 5 families at a scout event", label: "Family Fun", category: "Activities" },
 ];
 
 // 2 wide feature photos at the bottom
