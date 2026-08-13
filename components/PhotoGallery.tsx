@@ -43,10 +43,6 @@ function PhotoCard({ src, alt, label, category }: (typeof GRID_PHOTOS)[0]) {
           onError={() => setHasError(true)}
         />
       )}
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-        <p className="text-scout-gold text-xs font-semibold uppercase tracking-wider leading-none">{category}</p>
-        <p className="text-white font-bold text-sm leading-tight mt-0.5">{label}</p>
-      </div>
     </div>
   );
 }
@@ -69,10 +65,6 @@ function WideCard({ src, alt, label, category }: (typeof WIDE_PHOTOS)[0]) {
           onError={() => setHasError(true)}
         />
       )}
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-        <p className="text-scout-gold text-xs font-semibold uppercase tracking-wider">{category}</p>
-        <p className="text-white font-bold text-base leading-tight mt-0.5">{label}</p>
-      </div>
     </div>
   );
 }
