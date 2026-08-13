@@ -1,7 +1,7 @@
 const benefits = [
   { icon: "🏕️", text: "Camping trips and outdoor adventures" },
   { icon: "🏆", text: "Pinewood Derby car racing" },
-  { icon: "🛶", text: "Kayaking, hiking, and nature exploration" },
+  { icon: "🚲", text: "Biking, hiking, and nature exploration" },
   { icon: "🎭", text: "Skits, crafts, and creative projects" },
   { icon: "🤝", text: "Community service projects" },
   { icon: "🎖️", text: "Rank advancements and badge earning" },

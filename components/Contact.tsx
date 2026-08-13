@@ -10,135 +10,57 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact cards */}
-          <div className="space-y-6">
-            {[
-              {
-                icon: "📧",
-                title: "Email the Pack",
-                detail: "pack5wilmette@gmail.com",
-                href: "mailto:pack5wilmette@gmail.com",
-                sub: "Best for general inquiries and registration questions",
-              },
-              {
-                icon: "📍",
-                title: "We Meet In",
-                detail: "Wilmette, Illinois",
-                href: null,
-                sub: "Den and pack meeting locations shared with registered families",
-              },
-              {
-                icon: "🌐",
-                title: "Register Online",
-                detail: "my.Scouting.org",
-                href: "https://my.scouting.org",
-                sub: "Official BSA registration portal — create your family account here",
-              },
-              {
-                icon: "🏛️",
-                title: "Northeast Illinois Council",
-                detail: "nepathways.org",
-                href: "https://www.nepathways.org",
-                sub: "Our local NEIC council for events, camp registration, and scholarship resources",
-              },
-            ].map((item) => (
-              <div key={item.title} className="card flex gap-4 hover:shadow-lg transition-shadow">
-                <span className="text-3xl flex-shrink-0">{item.icon}</span>
-                <div>
-                  <h4 className="font-bold text-scout-blue-900 text-sm">{item.title}</h4>
-                  {item.href ? (
-                    <a
-                      href={item.href}
-                      target={item.href.startsWith("http") ? "_blank" : undefined}
-                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="text-scout-blue-900 font-semibold hover:text-scout-gold transition-colors"
-                    >
-                      {item.detail}
-                    </a>
-                  ) : (
-                    <p className="font-semibold text-scout-blue-900">{item.detail}</p>
-                  )}
-                  <p className="text-gray-500 text-xs mt-0.5">{item.sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Contact form */}
-          <div className="card shadow-lg">
-            <h3 className="text-xl font-bold text-scout-blue-900 mb-6">Send Us a Message</h3>
-            <form
-              action="mailto:pack5wilmette@gmail.com"
-              method="get"
-              encType="text/plain"
-              className="space-y-4"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Parent Name
-                  </label>
-                  <input
-                    type="text"
-                    name="parent"
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-scout-blue-900"
-                    placeholder="Jane Smith"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Scout&apos;s Grade
-                  </label>
-                  <select
-                    name="grade"
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-scout-blue-900"
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {[
+            {
+              icon: "📧",
+              title: "Email the Pack",
+              detail: "pack5wilmette@gmail.com",
+              href: "mailto:pack5wilmette@gmail.com",
+              sub: "Best for general inquiries and registration questions",
+            },
+            {
+              icon: "📍",
+              title: "We Meet In",
+              detail: "Wilmette, Illinois",
+              href: null,
+              sub: "Den and pack meeting locations shared with registered families",
+            },
+            {
+              icon: "🌐",
+              title: "Register Online",
+              detail: "my.Scouting.org",
+              href: "https://my.scouting.org",
+              sub: "Official BSA registration portal — create your family account here",
+            },
+            {
+              icon: "🏛️",
+              title: "Northeast Illinois Council",
+              detail: "neic.org",
+              href: "https://www.neic.org",
+              sub: "Our local NEIC council for events, camp registration, and scholarship resources",
+            },
+          ].map((item) => (
+            <div key={item.title} className="card flex gap-4 hover:shadow-lg transition-shadow">
+              <span className="text-3xl flex-shrink-0">{item.icon}</span>
+              <div>
+                <h4 className="font-bold text-scout-blue-900 text-sm">{item.title}</h4>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="text-scout-blue-900 font-semibold hover:text-scout-gold transition-colors"
                   >
-                    <option value="">Select grade…</option>
-                    <option value="K">Kindergarten (Lions)</option>
-                    <option value="1">1st Grade (Tigers)</option>
-                    <option value="2">2nd Grade (Wolves)</option>
-                    <option value="3">3rd Grade (Bears)</option>
-                    <option value="4">4th Grade (Webelos)</option>
-                    <option value="5">5th Grade (Arrow of Light)</option>
-                  </select>
-                </div>
+                    {item.detail}
+                  </a>
+                ) : (
+                  <p className="font-semibold text-scout-blue-900">{item.detail}</p>
+                )}
+                <p className="text-gray-500 text-xs mt-0.5">{item.sub}</p>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-scout-blue-900"
-                  placeholder="jane@example.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea
-                  name="body"
-                  rows={4}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-scout-blue-900 resize-none"
-                  placeholder="Hi! My child is in 2nd grade and we'd love to learn more about Pack 5…"
-                />
-              </div>
-              <button
-                type="submit"
-                className="btn-primary w-full justify-center text-base py-3"
-              >
-                Send Message →
-              </button>
-              <p className="text-xs text-gray-400 text-center">
-                This opens your email client. For fastest response, email{" "}
-                <a href="mailto:pack5wilmette@gmail.com" className="underline">
-                  pack5wilmette@gmail.com
-                </a>{" "}
-                directly.
-              </p>
-            </form>
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* Final CTA */}

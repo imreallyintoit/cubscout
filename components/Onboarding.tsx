@@ -7,15 +7,19 @@ const steps = [
       "Come to one of our free open Pack meetings (held monthly at First Presbyterian Church of Wilmette). Meet the Cubmaster, den leaders, and current Scouts. No commitment required — just show up!",
     action: "See our calendar →",
     actionHref: "#calendar",
+    action2: null,
+    actionHref2: null,
   },
   {
     number: "02",
     icon: "🌐",
     title: "Register Online",
     description:
-      "Create an account at my.Scouting.org and register your Scout with Pack 5 (Northeast Illinois Council). There are two registration fees: a Scouting America fee and a separate Northeast Illinois Council (NEIC) fee. See the Costs page for a full breakdown.",
-    action: "my.Scouting.org →",
-    actionHref: "https://my.scouting.org",
+      "Use our direct registration link to sign up online — it automatically routes to Pack 5 (Northeast Illinois Council). There are two registration fees: a Scouting America fee and a separate NEIC fee. See the Costs section for a full breakdown.",
+    action: "Register for Pack 5 →",
+    actionHref: "https://my.scouting.org/online-registration/5bbcced0-3329-4ac3-b533-d54dd99c9721/applicant-type?zip=60091",
+    action2: null,
+    actionHref2: null,
   },
   {
     number: "03",
@@ -25,15 +29,19 @@ const steps = [
       "Email our Cubmaster at pack5wilmette@gmail.com to confirm your registration and get assigned to the right den for your Scout's grade level.",
     action: "Email us →",
     actionHref: "mailto:pack5wilmette@gmail.com",
+    action2: null,
+    actionHref2: null,
   },
   {
     number: "04",
     icon: "👕",
     title: "Get Your Uniform",
     description:
-      "Pick up the official Cub Scout uniform shirt, neckerchief, and rank badge at the Scout Shop in Palatine or online at scoutshop.org. Budget approximately $80–120 for the full kit.",
-    action: "Scout Shop →",
+      "Pick up the official Cub Scout uniform shirt, neckerchief, and rank badge at the local Scout Shop in Vernon Hills or online. Budget approximately $80–120 for the full kit.",
+    action: "National online Scout Shop →",
     actionHref: "https://www.scoutshop.org",
+    action2: "Hours and Location of Local Scout Shop →",
+    actionHref2: "https://neic.org/scout-shop",
   },
   {
     number: "05",
@@ -43,6 +51,8 @@ const steps = [
       "Each rank has its own handbook (~$15) packed with activities, adventure requirements, and badge information. Your Scout will use it every meeting.",
     action: null,
     actionHref: null,
+    action2: null,
+    actionHref2: null,
   },
   {
     number: "06",
@@ -52,6 +62,8 @@ const steps = [
       "Join your den for weekly or bi-weekly meetings, attend monthly Pack meetings, and dive into adventures. Welcome to Pack 5!",
     action: null,
     actionHref: null,
+    action2: null,
+    actionHref2: null,
   },
 ];
 
@@ -84,16 +96,28 @@ export default function Onboarding() {
                 </div>
                 <h3 className="text-lg font-bold text-scout-blue-900 mb-3">{step.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">{step.description}</p>
-                {step.action && step.actionHref && (
-                  <a
-                    href={step.actionHref}
-                    target={step.actionHref.startsWith("http") ? "_blank" : undefined}
-                    rel={step.actionHref.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="text-scout-blue-900 font-semibold text-sm hover:text-scout-gold transition-colors"
-                  >
-                    {step.action}
-                  </a>
-                )}
+                <div className="flex flex-col gap-1">
+                  {step.action && step.actionHref && (
+                    <a
+                      href={step.actionHref}
+                      target={step.actionHref.startsWith("http") ? "_blank" : undefined}
+                      rel={step.actionHref.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="text-scout-blue-900 font-semibold text-sm hover:text-scout-gold transition-colors"
+                    >
+                      {step.action}
+                    </a>
+                  )}
+                  {step.action2 && step.actionHref2 && (
+                    <a
+                      href={step.actionHref2}
+                      target={step.actionHref2.startsWith("http") ? "_blank" : undefined}
+                      rel={step.actionHref2.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="text-scout-blue-900 font-semibold text-sm hover:text-scout-gold transition-colors"
+                    >
+                      {step.action2}
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}

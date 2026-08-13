@@ -60,7 +60,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.nepathways.org"
+                  href="https://www.neic.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-scout-gold transition-colors"

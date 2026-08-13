@@ -25,7 +25,7 @@ const firstYearCosts = [
     category: "Uniform Shirt",
     amount: 45,
     frequency: "one-time",
-    notes: "Official Cub Scout uniform shirt. Lions (K) and Tigers (1st) wear a rank t-shirt instead.",
+    notes: "Official Cub Scout uniform shirt ($45). Lions (K) and Tigers (1st) wear a rank-specific t-shirt instead ($14.99).",
     icon: "👕",
   },
   {
@@ -45,9 +45,16 @@ const firstYearCosts = [
   {
     category: "Hat / Cap",
     amount: 20,
-    frequency: "one-time",
-    notes: "Rank-specific cap. Optional — many families skip the hat.",
+    frequency: "annual",
+    notes: "Rank-specific cap changes each year as your Scout advances. Optional — many families skip the hat.",
     icon: "🧢",
+  },
+  {
+    category: "Scout Life Magazine",
+    amount: 15,
+    frequency: "annual",
+    notes: "Optional but highly recommended magazine for Cub Scouts and Scouts BSA. $15/year subscription.",
+    icon: "📰",
   },
   {
     category: "Rank Handbook",
@@ -78,6 +85,7 @@ const renewalCosts = [
   { category: "Pack 5 Dues", amount: 0, tbd: true },
   { category: "Neckerchief (annual, rank-specific)", amount: 20 },
   { category: "Rank Handbook", amount: 15 },
+  { category: "Hat / Cap (rank-specific)", amount: 20 },
   { category: "Camp / Activities (estimate)", amount: 150 },
   { category: "Pinewood Derby Car Kit", amount: 5 },
 ];
@@ -111,8 +119,7 @@ export default function Costs() {
           <div>
             <h3 className="text-xl font-bold text-scout-blue-900 mb-1">First-Year Cost Estimate</h3>
             <p className="text-sm text-gray-500 mb-4">
-              One-time uniform costs are included in year one. Financial assistance is available —
-              ask your den leader.
+              One-time uniform costs are included in year one.
             </p>
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
               <table className="w-full text-sm">
@@ -237,7 +244,15 @@ export default function Costs() {
             <p className="text-amber-800 text-sm leading-relaxed">
               No Scout should miss out on Scouting due to financial constraints. The Northeast
               Illinois Council offers&nbsp;
-              <strong>scholarships</strong> (registration fee assistance) and&nbsp;
+              <a
+                href="https://www.neic.org/scholarships"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline hover:text-amber-900"
+              >
+                scholarships
+              </a>
+              &nbsp;(registration fee assistance) and&nbsp;
               <strong>camperships</strong> (summer camp and day camp assistance) for families in
               need. Pack 5 may also have limited scholarship funds available — please contact our
               Cubmaster confidentially at{" "}

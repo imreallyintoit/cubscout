@@ -44,7 +44,7 @@ export default function Hero() {
             { value: "K–5", label: "All Grades" },
             { value: "Year-Round", label: "Activities" },
             { value: "Wilmette", label: "Based In" },
-            { value: "1st Presbyterian", label: "Chartered By" },
+            { value: "First Presbyterian", label: "Chartered By" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-extrabold text-scout-gold">
