@@ -15,9 +15,9 @@ const steps = [
     icon: "🌐",
     title: "Register Online",
     description:
-      "Create an account at my.Scouting.org and register your Scout with Pack 5 (Northeast Illinois Council). There are two registration fees: a Scouting America fee and a separate Northeast Illinois Council (NEIC) fee. See the Costs page for a full breakdown.",
-    action: "my.Scouting.org →",
-    actionHref: "https://my.scouting.org",
+      "Use our direct registration link to sign up online — it automatically routes to Pack 5 (Northeast Illinois Council). There are two registration fees: a Scouting America fee and a separate NEIC fee. See the Costs section for a full breakdown.",
+    action: "Register for Pack 5 →",
+    actionHref: "https://my.scouting.org/online-registration/5bbcced0-3329-4ac3-b533-d54dd99c9721/applicant-type?zip=60091",
     action2: null,
     actionHref2: null,
   },
