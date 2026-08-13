@@ -11,6 +11,17 @@ const CATEGORY_STYLES: Record<string, { bg: string; text: string; dot: string }>
   Other:    { bg: "bg-gray-100",   text: "text-gray-700",   dot: "bg-gray-400" },
 };
 
+function formatTime(t: string): string {
+  // Convert HH:MM 24-hour to 12-hour format; leave anything else as-is
+  const match = t.match(/^(\d{1,2}):(\d{2})$/);
+  if (!match) return t;
+  let h = parseInt(match[1], 10);
+  const m = match[2];
+  const ampm = h >= 12 ? "PM" : "AM";
+  h = h % 12 || 12;
+  return m === "00" ? `${h} ${ampm}` : `${h}:${m} ${ampm}`;
+}
+
 function formatDate(iso: string): { month: string; day: string; weekday: string } {
   try {
     const d = new Date(iso + "T12:00:00");
@@ -54,7 +65,7 @@ function EventCard({ event }: { event: SheetEvent }) {
           <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-xs text-gray-500">
             {event.startTime && (
               <span className="flex items-center gap-1">
-                🕐 {event.startTime}{event.endTime ? ` – ${event.endTime}` : ""}
+                🕐 {formatTime(event.startTime)}{event.endTime ? ` – ${formatTime(event.endTime)}` : ""}
               </span>
             )}
             {event.location && (
