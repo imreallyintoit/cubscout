@@ -12,8 +12,7 @@ const CATEGORY_STYLES: Record<string, { bg: string; text: string; dot: string }>
 };
 
 function formatTime(t: string): string {
-  // Convert HH:MM 24-hour to 12-hour format; leave anything else as-is
-  const match = t.match(/^(\d{1,2}):(\d{2})$/);
+  const match = t.match(/^(\d{1,2}):(\d{2})(?::\d{2})?$/);
   if (!match) return t;
   let h = parseInt(match[1], 10);
   const m = match[2];
@@ -62,7 +61,7 @@ function EventCard({ event }: { event: SheetEvent }) {
         </div>
 
         {(event.startTime || event.location) && (
-          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-xs text-gray-500">
+          <div className="flex flex-col gap-0.5 mt-1 text-xs text-gray-500">
             {event.startTime && (
               <span className="flex items-center gap-1">
                 🕐 {formatTime(event.startTime)}{event.endTime ? ` – ${formatTime(event.endTime)}` : ""}
