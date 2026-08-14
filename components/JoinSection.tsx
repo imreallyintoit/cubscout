@@ -74,10 +74,10 @@ export default function JoinSection() {
             <p className="text-center text-xs text-gray-400 mt-4">
               Or email us at{" "}
               <a
-                href="mailto:pack5wilmette@gmail.com"
+                href="mailto:cubscoutpack5wilmette@gmail.com"
                 className="text-scout-blue-900 hover:underline"
               >
-                pack5wilmette@gmail.com
+                cubscoutpack5wilmette@gmail.com
               </a>
             </p>
           </div>

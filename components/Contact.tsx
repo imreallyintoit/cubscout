@@ -15,8 +15,8 @@ export default function Contact() {
             {
               icon: "📧",
               title: "Email the Pack",
-              detail: "pack5wilmette@gmail.com",
-              href: "mailto:pack5wilmette@gmail.com",
+              detail: "cubscoutpack5wilmette@gmail.com",
+              href: "mailto:cubscoutpack5wilmette@gmail.com",
               sub: "Best for general inquiries and registration questions",
             },
             {
@@ -77,7 +77,7 @@ export default function Contact() {
             <a href="#calendar" className="btn-primary text-lg px-8 py-4">
               📅 See Upcoming Events
             </a>
-            <a href="mailto:pack5wilmette@gmail.com" className="btn-secondary text-lg px-8 py-4">
+            <a href="mailto:cubscoutpack5wilmette@gmail.com" className="btn-secondary text-lg px-8 py-4">
               📧 Email the Cubmaster
             </a>
           </div>
