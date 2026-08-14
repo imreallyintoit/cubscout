@@ -26,9 +26,9 @@ const steps = [
     icon: "📧",
     title: "Connect With Us",
     description:
-      "Email our Cubmaster at pack5wilmette@gmail.com to confirm your registration and get assigned to the right den for your Scout's grade level.",
+      "Email our Cubmaster at cubscoutpack5wilmette@gmail.com to confirm your registration and get assigned to the right den for your Scout's grade level.",
     action: "Email us →",
-    actionHref: "mailto:pack5wilmette@gmail.com",
+    actionHref: "mailto:cubscoutpack5wilmette@gmail.com",
     action2: null,
     actionHref2: null,
   },

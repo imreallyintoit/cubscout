@@ -257,10 +257,10 @@ export default function Costs() {
               need. Pack 5 may also have limited scholarship funds available — please contact our
               Cubmaster confidentially at{" "}
               <a
-                href="mailto:pack5wilmette@gmail.com"
+                href="mailto:cubscoutpack5wilmette@gmail.com"
                 className="font-semibold underline hover:text-amber-900"
               >
-                pack5wilmette@gmail.com
+                cubscoutpack5wilmette@gmail.com
               </a>{" "}
               to learn more.
             </p>
