@@ -54,7 +54,7 @@ export default function JoinSection() {
             <div className="space-y-3 mb-6">
               {[
                 { icon: "📅", text: "Attend a free Pack meeting to visit" },
-                { icon: "🌐", text: "Register online at my.Scouting.org" },
+                { icon: "🌐", text: "Sign up directly for Pack 5 online" },
                 { icon: "📧", text: "Email our Cubmaster to connect" },
               ].map((step) => (
                 <div key={step.text} className="flex items-center gap-3 text-gray-700 text-sm">
@@ -65,8 +65,17 @@ export default function JoinSection() {
             </div>
 
             <a
+              href="https://beascout.scouting.org/units/5bbcced0-3329-4ac3-b533-d54dd99c9721"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center btn-primary w-full justify-center text-base py-4 mb-3"
+            >
+              🚀 Sign Up for Pack 5 →
+            </a>
+
+            <a
               href="#contact"
-              className="block text-center btn-primary w-full justify-center text-base py-4"
+              className="block text-center btn-secondary w-full justify-center text-base py-3"
             >
               Contact the Cubmaster →
             </a>
