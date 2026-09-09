@@ -99,17 +99,6 @@ export default function PopcornPage() {
         </div>
       </section>
 
-      {/* ── Hero photo ── */}
-      <div className="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden">
-        <Image
-          src="https://i.imgur.com/xGQHQoT.jpeg"
-          alt="Pack 5 Scouts at a popcorn storefront shift"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
       {/* ── Three Steps ── */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -372,14 +361,25 @@ export default function PopcornPage() {
       {/* ── Teaching Your Scout to Sell ── */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">The Real Prize Isn&apos;t the Popcorn.</h2>
-            <p className="section-subheading max-w-3xl mx-auto">
-              Every dollar your Scout brings in matters, but the sale itself is doing something bigger. Asking a stranger
-              for something, hearing &ldquo;no&rdquo; and staying friendly anyway, keeping track of a goal, making change, saying
-              thank you regardless of the answer — these are grown-up skills, and popcorn season is one of the only times
-              a 7-year-old gets to practice all of them at once, out loud, in public.
-            </p>
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="section-heading">The Real Prize Isn&apos;t the Popcorn.</h2>
+              <p className="section-subheading">
+                Every dollar your Scout brings in matters, but the sale itself is doing something bigger. Asking a stranger
+                for something, hearing &ldquo;no&rdquo; and staying friendly anyway, keeping track of a goal, making change, saying
+                thank you regardless of the answer — these are grown-up skills, and popcorn season is one of the only times
+                a 7-year-old gets to practice all of them at once, out loud, in public.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Image
+                src="https://i.imgur.com/xGQHQoT.jpeg"
+                alt="A Pack 5 Scout selling popcorn at a storefront shift"
+                width={220}
+                height={280}
+                className="rounded-2xl shadow-lg object-cover"
+              />
+            </div>
           </div>
 
           {/* Life skills grid */}
