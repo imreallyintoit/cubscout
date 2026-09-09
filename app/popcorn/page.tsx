@@ -291,11 +291,6 @@ export default function PopcornPage() {
                 </a>
               </div>
             </div>
-            <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-4 py-2">
-              ⚠️ <strong>CONFIRM WITH MATT:</strong> The donation link above is a scout-specific storefront URL (code 7QIHRTE0).
-              Verify this is the intended link for pack-wide donations before sharing broadly, since Trail&apos;s End store
-              links are normally tied to one individual Scout&apos;s account.
-            </p>
           </div>
         </div>
       </section>
