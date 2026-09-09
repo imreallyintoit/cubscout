@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#gallery", label: "Photos" },
-  { href: "#join", label: "Join Pack 5" },
-  { href: "#onboarding", label: "Get Started" },
-  { href: "#costs", label: "Costs" },
-  { href: "#calendar", label: "Calendar" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#gallery", label: "Photos" },
+  { href: "/#join", label: "Join Pack 5" },
+  { href: "/#onboarding", label: "Get Started" },
+  { href: "/#costs", label: "Costs" },
+  { href: "/#calendar", label: "Calendar" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 text-white font-bold text-lg">
+          <a href="/" className="flex items-center gap-2 text-white font-bold text-lg">
             <span className="text-2xl">⚜️</span>
             <span>
               <span className="text-scout-gold">Pack 5</span> Wilmette
@@ -49,8 +49,18 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+
+            {/* Popcorn Sale button */}
             <a
-              href="#join"
+              href="/popcorn"
+              className="ml-2 flex flex-col items-center bg-amber-400 hover:bg-amber-300 text-amber-900 font-bold rounded-lg px-4 py-1.5 transition-colors leading-tight"
+            >
+              <span className="text-sm">🍿 Popcorn Sale</span>
+              <span className="text-[10px] font-medium opacity-80">Sep 12 – Nov 27</span>
+            </a>
+
+            <a
+              href="/#join"
               className="ml-2 btn-primary text-sm px-4 py-2"
             >
               Join Now
@@ -78,6 +88,16 @@ export default function Navbar() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden pb-4">
+            {/* Popcorn Sale – top of mobile menu */}
+            <a
+              href="/popcorn"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-between bg-amber-400 hover:bg-amber-300 text-amber-900 font-bold rounded-lg px-4 py-3 mb-3 transition-colors"
+            >
+              <span>🍿 Popcorn Sale</span>
+              <span className="text-xs font-medium opacity-80">Sep 12 – Nov 27</span>
+            </a>
+
             {links.map((link) => (
               <a
                 key={link.href}
@@ -89,7 +109,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#join"
+              href="/#join"
               onClick={() => setMenuOpen(false)}
               className="block mt-2 btn-primary text-sm"
             >
