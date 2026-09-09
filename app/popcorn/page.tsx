@@ -442,7 +442,7 @@ export default function PopcornPage() {
               {[
                 { tip: "Practice at home first.", detail: "Two or three run-throughs the night before a shift make a real difference. Play the customer yourself, including saying no once, so it isn't a surprise the first time it happens for real." },
                 { tip: "Let your Scout do the talking.", detail: "It's tempting to jump in when there's an awkward pause. Give it a few extra seconds before you help. That pause is where the confidence actually gets built." },
-                { tip: "Reset expectations on "no."", detail: "Roughly one in ten people say yes. That means nine "no"s are completely normal on the way to a sale, not a sign anything is going wrong." },
+                { tip: 'Reset expectations on "no."', detail: 'Roughly one in ten people say yes. That means nine "no"s are completely normal on the way to a sale, not a sign anything is going wrong.' },
                 { tip: "Debrief after each shift.", detail: "Three quick questions: What went well? What felt hard? What do you want to try differently next time? This turns each shift into a skill your Scout is building, not just a task getting checked off." },
                 { tip: "Celebrate the effort, not just the total.", detail: "A Scout who confidently asked twenty people and sold three bags grew exactly as much as one who sold out in an hour. Notice that out loud." },
               ].map((item) => (
