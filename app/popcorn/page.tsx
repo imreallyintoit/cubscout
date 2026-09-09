@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "2026 Popcorn Sale | Cub Scout Pack 5 Wilmette",
@@ -97,6 +98,17 @@ export default function PopcornPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Hero photo ── */}
+      <div className="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden">
+        <Image
+          src="https://i.imgur.com/xGQHQoT.jpeg"
+          alt="Pack 5 Scouts at a popcorn storefront shift"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
       {/* ── Three Steps ── */}
       <section className="py-20 bg-gray-50">
