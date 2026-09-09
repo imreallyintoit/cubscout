@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "2026 Popcorn Sale | Cub Scout Pack 5 Wilmette",
@@ -97,6 +98,17 @@ export default function PopcornPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Hero photo ── */}
+      <div className="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden">
+        <Image
+          src="https://i.imgur.com/xGQHQoT.jpeg"
+          alt="Pack 5 Scouts at a popcorn storefront shift"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
       {/* ── Three Steps ── */}
       <section className="py-20 bg-gray-50">
@@ -291,11 +303,6 @@ export default function PopcornPage() {
                 </a>
               </div>
             </div>
-            <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-4 py-2">
-              ⚠️ <strong>CONFIRM WITH MATT:</strong> The donation link above is a scout-specific storefront URL (code 7QIHRTE0).
-              Verify this is the intended link for pack-wide donations before sharing broadly, since Trail&apos;s End store
-              links are normally tied to one individual Scout&apos;s account.
-            </p>
           </div>
         </div>
       </section>
