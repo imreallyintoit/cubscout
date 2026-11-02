@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { fetchSheetEvents, DEMO_EVENTS } from "@/lib/googleSheets";
 
 export const runtime = "edge";
-export const revalidate = 3600; // cache for 1 hour
+export const revalidate = 60; // cache for 1 minute
 
 export async function GET() {
   const spreadsheetId = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ID;
