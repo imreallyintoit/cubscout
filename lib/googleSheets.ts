@@ -31,7 +31,7 @@ export async function fetchSheetEvents(
   const range = encodeURIComponent(`${tab}!A2:H200`);
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
 
-  const res = await fetch(url, { next: { revalidate: 3600 } }); // cache 1 hour
+  const res = await fetch(url, { cache: "no-store" }); // always fresh from Google Sheets
   if (!res.ok) {
     throw new Error(`Google Sheets API error: ${res.status} ${res.statusText}`);
   }
