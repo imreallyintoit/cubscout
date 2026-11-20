@@ -207,7 +207,7 @@ export default function PopcornPage() {
                       >
                         step-by-step help guide
                       </a>
-                      , or post in the Pack 5 WhatsApp group.
+                      .
                     </span>
                   </li>
                 </ol>
